@@ -10,7 +10,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOUt'
+      ease: 'easeInOut'
     }
   }
 }
@@ -55,7 +55,7 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        variant={scaleVariants}
+        variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
