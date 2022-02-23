@@ -9,9 +9,11 @@ const About = () => {
   const [aboutTopics, setAboutTopics] = useState([])
 
   useEffect(() => {
-    const query = '*[_type == "aboutTopics"]'
+    const query = '*[_type == "aboutTopics"]' 
   
-    client.fetch(query).then(data => setAboutTopics(data))
+    client.fetch(query).then((data) => {
+      setAboutTopics(data)
+    })
   }, [])
   
   return (
@@ -21,20 +23,20 @@ const About = () => {
 
       <div className="app__profiles">
         {
-          aboutTopics.map((topic, index) => (
+          aboutTopics.map((about, index) => (
             <motion.div
               whileInView={{ opacity: 1 }}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.5, type: 'tween' }}
               className="app__profile-item"
-              key={topic.title + index}
+              key={about.title + index}
             >
-              <img src={topic.imgUrl} alt={topic.title} />
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
               <h2 className="bold-text" style={{ marginTop: 20 }}>
-                  {topic.title}
+                  {about.title}
               </h2>
               <p className="p-text" style={{ marginTop: 10 }}>
-                  {topic.description}
+                  {about.description}
               </p>
             </motion.div>
           ) )
