@@ -6,13 +6,13 @@ import './About.scss'
 import { urlFor, client } from '../../client'
 
 const About = () => {
-  const [aboutTopics, setAboutTopics] = useState([])
+  const [abouts, setAbouts] = useState([])
 
   useEffect(() => {
-    const query = '*[_type == "aboutTopics"]' 
+    const query = '*[_type == "abouts"]' 
   
     client.fetch(query).then((data) => {
-      setAboutTopics(data)
+      setAbouts(data)
     })
   }, [])
   
@@ -22,7 +22,7 @@ const About = () => {
 
       <div className="app__profiles">
         {
-          aboutTopics.map((about, index) => (
+          abouts.map((about, index) => (
             <motion.div
               whileInView={{ opacity: 1 }}
               whileHover={{ scale: 1.1 }}
