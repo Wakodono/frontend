@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import { client } from "../../client";
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
-import './Footer.scss'
+import './Footer.scss';
+
 
 const Footer = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })

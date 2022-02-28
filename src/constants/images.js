@@ -26,6 +26,7 @@ import about04 from '../assets/about04.png';
 import wako_profile from '../assets/wako_profile.jpg';
 import circle from '../assets/circle.svg';
 import wako from '../assets/wako.png';
+import crown_logo from '../assets/crown_logo.png'
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -69,6 +70,7 @@ const skillsIcons = {
   nb,
   skype,
   spotify,
+  crown_logo,
 };
 
 export default skillsIcons
