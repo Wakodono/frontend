@@ -22,7 +22,7 @@ const Footer = () => {
 
     const contact = {
       _type: 'contact',
-      name: formData.name,
+      name: formData.username,
       email: formData.email,
       message: formData.message,
     }
